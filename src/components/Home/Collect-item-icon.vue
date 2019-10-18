@@ -1,50 +1,26 @@
 <template>
-  <li class="cli1 fl">
-    <a href="#">
-      <div class="content_box">
-        <slot :data="data.img"></slot>
-      </div>
-      <div class="content_info">
-        <div class="sp1">{{data.price}}</div>
-        <div class="info_txt">{{data.title}}</div>
-        <div class="info_type">{{data.type}}</div>
-        <div class="info_time">
-          <p>
-            <i class="iconfont icon00FE"></i>
-            <span class="timecount">{{data.time}}天</span>
-            <span class="sp2">欲购稿件量: {{data.number}}篇</span>
-          </p>
-        </div>
-        <div class="info_bottom">
-          <div class="userP fr">
-            <div class="cir1 fl">
-              <Vicon :data="data.users"></Vicon>
-            </div>
-            <i class="cirline"></i>
-            <span class="cir2 fr">
-              <i class="iconfont iconzhifeiji"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-    </a>
-  </li>
+  <span>
+    <div class="circle circle01" v-for="(item,index) in data" :key="item.content">
+      <img :src="item.icon" />
+      <span class="tooltip1" :style="{left:45*index+'px'}">
+        {{item.content}}
+        <div class="jiao"></div>
+      </span>
+    </div>
+  </span>
 </template>
 
 <script>
-import Vicon from "./Collect-item-icon";
 export default {
-  components: {
-    Vicon
-  },
+  name: "vicon",
   props: {
     data: {
-      type: Object,
-      default: {}
+      type: Array,
+      default: () => []
     }
   },
   mounted() {
-    // console.log(this.data);
+    console.log(this.data);
   }
 };
 </script>

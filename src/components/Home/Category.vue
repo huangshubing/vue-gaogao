@@ -1,43 +1,44 @@
 <template>
   <ul class="category w">
-    <li class="cli1 fl">
-      <div class="category_box">
-        <img src="../../assets/img/category_01.png" alt />
-      </div>
-      <div class="category_info">商稿</div>
-    </li>
-    <li class="cli1 fl">
-      <div class="category_box">
-        <img src="../../assets/img/category_02.png" alt />
-      </div>
-      <div class="category_info">自媒体</div>
-    </li>
-    <li class="cli1 fl">
-      <div class="category_box">
-        <img src="../../assets/img/category_03.png" alt />
-      </div>
-      <div class="category_info">短视频</div>
-    </li>
-    <li class="cli1 fl">
-      <div class="category_box">
-        <img src="../../assets/img/category_04.png" alt />
-      </div>
-      <div class="category_info">专业稿件</div>
-    </li>
-    <li class="cli1 fl">
-      <div class="category_box">
-        <img src="../../assets/img/category_05.png" alt />
-      </div>
-      <div class="category_info">素材征集</div>
-    </li>
+    <CategoryItem v-for="(item, index) in data" :key="index" :data="item"></CategoryItem>
   </ul>
 </template>
 
 <script>
+import CategoryItem from "./Category-item";
 export default {
-  name: "Banner",
+  components: {
+    CategoryItem
+  },
+  data() {
+    return {
+      data: [
+        {
+          type: "商稿",
+          img: "http://ggoss.bqj.cn/20190524/image/3/1558685625935282.png"
+        },
+        {
+          type: "自媒体",
+          img: "http://ggoss.bqj.cn/20190524/image/3/1558685647292222.png"
+        },
+        {
+          type: "短视频",
+          img: "http://ggoss.bqj.cn/20190524/image/3/1558685663518266.png"
+        },
+        {
+          type: "专业稿件",
+          img: "http://ggoss.bqj.cn/20190524/image/3/1558685655442669.png"
+        },
+        {
+          type: "素材征集",
+          img: "http://ggoss.bqj.cn/20190524/image/3/1558685670973101.png"
+        }
+      ]
+    };
+  },
   props: {
-    msg: String
+    msg: String,
+    default: "no data"
   }
 };
 </script>
@@ -46,33 +47,5 @@ export default {
 .category {
   padding-top: 15px;
   overflow: hidden;
-  .cli1 {
-    width: 19.17%;
-    background: #fff;
-    display: inline-block;
-    margin: 8px 4px 0;
-    height: 160px;
-    padding: 6px;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    .category_box {
-      position: relative;
-      height: 94px;
-      text-align: center;
-      img {
-        width: 56px;
-        height: 56px;
-        border-radius: 5px;
-        margin-top: 24px;
-      }
-    }
-    .category_info {
-      width: 100%;
-      padding: 12px 10px 0;
-      position: relative;
-      box-sizing: border-box;
-    }
-  }
 }
 </style>

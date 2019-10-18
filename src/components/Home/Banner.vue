@@ -15,23 +15,23 @@
         <div class="bannerAdv_left fl">
           <a href="#">
             <i class="iconfont iconvolume_icon"></i>
-            <span @mouseover="onMouseOver" @mouseout="onMouseOut">v2.8.9版本发布公告</span>
+            <span>v2.8.9版本发布公告</span>
           </a>
         </div>
         <div class="bannerAdv_right fr">
           <a href="#">
             <i class="iconfont iconxinhao1"></i>
-            <span @mouseover="onMouseOver" @mouseout="onMouseOut">我要买稿</span>
+            <span>我要买稿</span>
           </a>
           <a href="#">
             |
             <i class="iconfont iconyumao"></i>
-            <span @mouseover="onMouseOver" @mouseout="onMouseOut">我要卖稿</span>
+            <span>我要卖稿</span>
           </a>
           <a href="#">
             |
             <i class="iconfont iconi"></i>
-            <span @mouseover="onMouseOver" @mouseout="onMouseOut">了解稿稿</span>
+            <span>了解稿稿</span>
           </a>
         </div>
       </div>
@@ -43,22 +43,8 @@
 import Swiper from "swiper";
 import "swiper/css/swiper.min.css";
 export default {
-  name: "Banner",
   props: {
     msg: String
-  },
-  methods: {
-    onMouseOver(params) {
-      params.currentTarget.className = "underline";
-      // console.log("鼠标移入", this);
-    },
-    onMouseOut(params) {
-      params.currentTarget.className = "";
-      // console.log("鼠标移出", this);
-    },
-    onClick() {
-      console.log("点击事件");
-    }
   },
   mounted() {
     var mySwiper = new Swiper(".swiper-container", {
@@ -97,11 +83,9 @@ export default {
         color: #fff;
         padding: 0 8px;
         float: left;
-        span {
-          &.underline {
-            border-bottom: 1px solid #fff;
-            padding-bottom: 1px;
-          }
+        span:hover {
+          border-bottom: 1px solid #fff;
+          padding-bottom: 1px;
         }
         .iconfont {
           padding-right: 8px;

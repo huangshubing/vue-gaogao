@@ -4,60 +4,56 @@
       <span class="feed_title_txt fl">供稿服务</span>
     </div>
     <ul class="feed_category w">
-      <li class="cli1 fl">
-        <div class="category_box">
-          <img src="../../assets/img/feed_blank_01.png" alt />
-        </div>
-        <div class="category_info">
-          <h3>媒体稿件</h3>
-          <p>MEDIA</p>
-        </div>
-      </li>
-      <li class="cli1 fl">
-        <div class="category_box">
-          <img src="../../assets/img/feed_blank_02.png" alt />
-        </div>
-        <div class="category_info">
-          <h3>商业稿件</h3>
-          <p>COMMERCIAL</p>
-        </div>
-      </li>
-      <li class="cli1 fl">
-        <div class="category_box">
-          <img src="../../assets/img/feed_blank_03.png" alt />
-        </div>
-        <div class="category_info">
-          <h3>专业稿件</h3>
-          <p>PROFESSIONAL</p>
-        </div>
-      </li>
-      <li class="cli1 fl">
-        <div class="category_box">
-          <img src="../../assets/img/feed_blank_04.png" alt />
-        </div>
-        <div class="category_info">
-          <h3>图片图集</h3>
-          <p>PICTURE</p>
-        </div>
-      </li>
-      <li class="cli1 fl">
-        <div class="category_box">
-          <img src="../../assets/img/feed_blank_05.png" alt />
-        </div>
-        <div class="category_info">
-          <h3>短视频</h3>
-          <p>VIDEO</p>
-        </div>
-      </li>
+      <FeedItem v-for="(item, index) in data" :key="index" :data="item"></FeedItem>
     </ul>
   </div>
 </template>
 
 <script>
+import FeedItem from "./Feed-item";
 export default {
-  name: "Banner",
+  components: {
+    FeedItem
+  },
+  data() {
+    return {
+      data: [
+        {
+          img1: "https://ggapi.bqj.cn/image/new_index/feed_hs1.jpg",
+          img2: "https://ggapi.bqj.cn/image/new_index/feed_cs1.jpg",
+          type: "媒体稿件",
+          txt: "MEDIA"
+        },
+        {
+          img1: "https://ggapi.bqj.cn/image/new_index/feed_hs2.jpg",
+          img2: "https://ggapi.bqj.cn/image/new_index/feed_cs2.jpg",
+          type: "商业稿件",
+          txt: "COMMERCIAL"
+        },
+        {
+          img1: "https://ggapi.bqj.cn/image/new_index/feed_hs3.png",
+          img2: "https://ggapi.bqj.cn/image/new_index/feed_cs3.png",
+          type: "专业稿件",
+          txt: "PROFESSIONAL"
+        },
+        {
+          img1: "https://ggapi.bqj.cn/image/new_index/feed_hs4.jpg",
+          img2: "https://ggapi.bqj.cn/image/new_index/feed_cs4.jpg",
+          type: "图片图集",
+          txt: "PICTURE"
+        },
+        {
+          img1: "https://ggapi.bqj.cn/image/new_index/feed_hs5.jpg",
+          img2: "https://ggapi.bqj.cn/image/new_index/feed_cs5.jpg",
+          type: "短视频",
+          txt: "VIDEO"
+        }
+      ]
+    };
+  },
   props: {
-    msg: String
+    msg: String,
+    default: "no data"
   }
 };
 </script>

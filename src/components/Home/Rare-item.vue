@@ -86,17 +86,15 @@
                 <p>时事热点/情感/生活窍门</p>
               </div>
             </li>
+          </div>
+          <div class="swiper-slide swiper-slide2">
             <li class="cli1 fl">
               <div class="category_box">
                 <img src="../../assets/img/feed_blank_01.png" alt />
               </div>
               <div class="category_info">
                 <h3>媒体稿件</h3>
-                <div class="mess">
-                  <span>钻石写手</span>
-                </div>
-                <p>累计写稿305篇</p>
-                <p>时事热点/情感/生活窍门</p>
+                <p>MEDIA</p>
               </div>
             </li>
             <li class="cli1 fl">
@@ -105,11 +103,7 @@
               </div>
               <div class="category_info">
                 <h3>商业稿件</h3>
-                <div class="mess">
-                  <span>钻石写手</span>
-                </div>
-                <p>累计写稿305篇</p>
-                <p>时事热点/情感/生活窍门</p>
+                <p>COMMERCIAL</p>
               </div>
             </li>
             <li class="cli1 fl">
@@ -118,11 +112,7 @@
               </div>
               <div class="category_info">
                 <h3>专业稿件</h3>
-                <div class="mess">
-                  <span>钻石写手</span>
-                </div>
-                <p>累计写稿305篇</p>
-                <p>时事热点/情感/生活窍门</p>
+                <p>PROFESSIONAL</p>
               </div>
             </li>
             <li class="cli1 fl">
@@ -131,11 +121,7 @@
               </div>
               <div class="category_info">
                 <h3>图片图集</h3>
-                <div class="mess">
-                  <span>钻石写手</span>
-                </div>
-                <p>累计写稿305篇</p>
-                <p>时事热点/情感/生活窍门</p>
+                <p>PICTURE</p>
               </div>
             </li>
             <li class="cli1 fl">
@@ -144,24 +130,7 @@
               </div>
               <div class="category_info">
                 <h3>短视频</h3>
-                <div class="mess">
-                  <span>钻石写手</span>
-                </div>
-                <p>累计写稿305篇</p>
-                <p>时事热点/情感/生活窍门</p>
-              </div>
-            </li>
-            <li class="cli1 fl">
-              <div class="category_box">
-                <img src="../../assets/img/feed_blank_05.png" alt />
-              </div>
-              <div class="category_info">
-                <h3>短视频</h3>
-                <div class="mess">
-                  <span>钻石写手</span>
-                </div>
-                <p>累计写稿305篇</p>
-                <p>时事热点/情感/生活窍门</p>
+                <p>VIDEO</p>
               </div>
             </li>
           </div>
@@ -181,7 +150,7 @@ export default {
   mounted() {
     var mySwiper = new Swiper(".swiper-container", {
       autoplay: false,
-      loop: false
+      loop: true
     });
   }
 };
@@ -189,7 +158,7 @@ export default {
 
 <style scoped lang="less">
 .rare {
-  // background: #f1f3f4;
+  background-color: #fff;
   margin-top: 20px;
   padding-top: 40px;
   p {
@@ -218,18 +187,34 @@ export default {
   .rare_category {
     width: 80%;
     overflow: hidden;
+    .swiper-container {
+      // background: rgb(100, 161, 226);
+      .swiper-slide1 {
+        background-color: #333;
+      }
+      .swiper-slide2 {
+        background-color: #64a1e2;
+      }
+    }
     .cli1 {
       width: 10%;
-      height: 260px;
+      background: #f1f3f4;
       display: inline-block;
       margin: 3% 3.3% 0;
-      box-sizing: border-box;
+      // height: 200px;
+      // padding: 6px;
+      // border-radius: 5px;
+      // box-sizing: border-box;
       .category_box {
         position: relative;
         height: 95px;
         text-align: center;
         overflow: hidden;
         img {
+          // transition: all 1s ease 0s;
+          // position: absolute;
+          // top: 0;
+          // left: 0;
           width: 90px;
           height: 90px;
           border-radius: 50%;
@@ -269,7 +254,6 @@ export default {
     }
     .cli1:hover {
       width: 16.6%;
-      background-color: #fff;
       // height: 280px;
       margin: 0;
       .category_box {
