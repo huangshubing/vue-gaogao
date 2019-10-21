@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="container">
-      <NavBar />
       <Banner />
       <Collect />
       <Category />

@@ -20,6 +20,13 @@
       "unicode_decimal": 58920
     },
     {
+      "icon_id": "1464675",
+      "name": "钱",
+      "font_class": "qian",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
       "icon_id": "2119427",
       "name": "声音",
       "font_class": "volume_icon",
@@ -48,6 +55,13 @@
       "unicode_decimal": 59204
     },
     {
+      "icon_id": "3768107",
+      "name": "信息",
+      "font_class": "user-reply",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "3783074",
       "name": "邮箱",
       "font_class": "youxiang",
@@ -62,11 +76,18 @@
       "unicode_decimal": 59107
     },
     {
-      "icon_id": "9649635",
-      "name": "纸飞机",
-      "font_class": "zhifeiji-copy",
-      "unicode": "e601",
-      "unicode_decimal": 58881
+      "icon_id": "8567775",
+      "name": "箱子",
+      "font_class": "xiangzi",
+      "unicode": "e737",
+      "unicode_decimal": 59191
+    },
+    {
+      "icon_id": "8676268",
+      "name": "zgl",
+      "font_class": "zgl",
+      "unicode": "e609",
+      "unicode_decimal": 58889
     },
     {
       "icon_id": "10431317",
@@ -81,6 +102,13 @@
       "font_class": "yumao",
       "unicode": "e6b0",
       "unicode_decimal": 59056
+    },
+    {
+      "icon_id": "10600063",
+      "name": "账户设置",
+      "font_class": "zhanghushezhi",
+      "unicode": "e643",
+      "unicode_decimal": 58947
     },
     {
       "icon_id": "11115249",

@@ -8,14 +8,15 @@
       </div>
       <div class="gg-home-navbar-nav">
         <ul>
-          <li class="act">
-            <a href="#">首页</a>
+          <li>
+            <router-link to="/">首页</router-link>
           </li>
           <li>
-            <a href="#">征稿令</a>
+            <router-link to="/userInfo/1">征稿令</router-link>
           </li>
           <li>
             <a href="#">供稿服务</a>
+            <!-- <span @click="add()">供稿服务</span> -->
           </li>
           <li>
             <a href="#">
@@ -38,7 +39,8 @@ export default {
   name: "NavBar",
   props: {
     msg: String
-  }
+  },
+  methods: {}
 };
 </script>
 
@@ -47,10 +49,12 @@ export default {
 .gaogao-nav {
   width: 100%;
   height: 67px;
+  margin: 0 auto;
   background-color: #fff;
   position: fixed;
   top: 0;
   z-index: 20;
+  border-bottom: 1px solid #ddd;
   .gg-home-navbar {
     background-color: #fff;
     display: flex;
@@ -82,11 +86,6 @@ export default {
           border-left: 1px solid #fff;
           border-right: 1px solid #fff;
           box-sizing: border-box;
-          &.act {
-            border-top: solid 3px #31a081;
-            border-left: 1px solid #eee;
-            border-right: 1px solid #eee;
-          }
           a {
             padding: 0 12px;
             line-height: 64px;
